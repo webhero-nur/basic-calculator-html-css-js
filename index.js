@@ -9,8 +9,11 @@ buttons.map(button => {
                 break;
             case '=':
                 try {
-                    display.innerText = eval(display.innerText);
-                } catch {
+                    if (display.innerText != '') {
+                        display.innerText = eval(display.innerText);
+                    }
+                }
+                catch {
                     display.innerText = "Error!"
                 }
                 break;
@@ -24,3 +27,7 @@ buttons.map(button => {
         }
     });
 });
+
+function calculationFunc() {
+
+}
